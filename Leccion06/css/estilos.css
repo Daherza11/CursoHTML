@@ -1,0 +1,17 @@
+ol{
+    list-style: none;
+    counter-reset: cont;
+}
+
+ol li{
+    counter-increment: cont;
+}
+
+ol li::before{
+    content: 'Curso ' counter(cont)') ';
+    color: #ff6f00;
+}
+
+ol li::after{
+    content: '.';
+}
